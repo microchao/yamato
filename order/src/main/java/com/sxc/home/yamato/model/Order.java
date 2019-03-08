@@ -10,6 +10,7 @@ import javax.persistence.Id;
 @Entity
 public class Order {
 
+    @Id
     private Integer id;
 
     private String name;
