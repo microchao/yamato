@@ -1,4 +1,4 @@
-package com.sxc.home.yamato.repository;
+package com.sxc.home.yamato.service.repository;
 
 import com.sxc.home.yamato.model.Order;
 import org.springframework.data.repository.CrudRepository;

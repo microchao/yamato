@@ -2,7 +2,6 @@ package com.sxc.home.yamato.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 /**
  * Created by shenxiaochao on 2019/3/8.
@@ -11,6 +10,7 @@ import javax.persistence.Id;
 public class Order {
 
     @Id
+    @GeneratedValue
     private Integer id;
 
     private String name;
