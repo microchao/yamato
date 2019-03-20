@@ -1,29 +1,32 @@
 package com.sxc.home.yamato;
 
 import com.sxc.home.yamato.service.mybatis.OrderMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+//@SpringBootApplication(scanBasePackages = "com.sxc.home.yamato.service.mybatis.*")
 @SpringBootApplication
 //@EnableJpaRepositories
-public class OrderApplication implements CommandLineRunner{
+public class OrderApplication {
 
-	private OrderMapper orderMapper;
+//	@Autowired
+//	private OrderMapper orderMapper;
 
-	OrderApplication(OrderMapper orderMapper) {
-		this.orderMapper = orderMapper;
-	}
+//	OrderApplication(OrderMapper orderMapper) {
+//		this.orderMapper = orderMapper;
+//	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(OrderApplication.class, args);
 
 
 	}
-
-	@Override
-	public void run(String... args) throws Exception {
-		System.out.println(this.orderMapper.findOrder(1));
-	}
+//
+//	@Override
+//	public void run(String... args) throws Exception {
+//		System.out.println(this.orderMapper.findOrder(1));
+//	}
 }

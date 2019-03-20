@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping(path="/order")
 public class OrderController {
-//
-    /*@Autowired
-    private OrderRepository orderRepository;*/
 
+   @Autowired
+   private OrderRepository orderRepository;
 
+	private OrderMapper orderMapper;
 
     @GetMapping(path="/add")
     public String addOrder() {
         Order order = new Order();
         order.setName("aa");
-//        orderMapper.findOrder(1);
+        orderMapper.findOrder(1);
         return "success";
     }
 
