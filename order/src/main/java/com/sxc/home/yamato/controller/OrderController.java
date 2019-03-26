@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
 /**
  * Created by shenxiaochao on 2019/3/8.
  */
@@ -14,17 +16,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(path="/order")
 public class OrderController {
 
-   @Autowired
-   private OrderRepository orderRepository;
+    @Autowired
+    private OrderRepository orderRepository;
 
-	private OrderMapper orderMapper;
+    @Autowired
+    private OrderMapper orderMapper;
 
-    @GetMapping(path="/add")
+    @GetMapping(path = "/add")
     public String addOrder() {
         Order order = new Order();
         order.setName("aa");
         orderMapper.findOrder(1);
         return "success";
+    }
+
+
+    @GetMapping(path = "/index")
+    public String index() {
+
+        return "home";
     }
 
 }

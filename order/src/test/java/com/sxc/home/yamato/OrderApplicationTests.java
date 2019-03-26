@@ -1,18 +1,22 @@
 package com.sxc.home.yamato;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
 public class OrderApplicationTests {
 
-	@Test
-	public void contextLoads() {
+//	@Test
+//	public void contextLoads() {
+//
+//
+//	}
 
 
+	public static void main(String[] args) {
+
+		Resource resource = new ClassPathResource("jsp/home.jsp");
+		System.out.println(resource.isReadable());
 	}
-
 }

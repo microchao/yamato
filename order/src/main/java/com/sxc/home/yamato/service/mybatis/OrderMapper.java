@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public interface OrderMapper {
 
-    @Select("SELECT * FROM Order WHERE id = #{id}")
+    @Select("SELECT * FROM `order` where id= #{id}")
     Order findOrder(@Param("id") int id);
 
 }
