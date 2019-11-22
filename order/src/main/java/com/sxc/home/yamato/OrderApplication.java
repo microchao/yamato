@@ -2,6 +2,7 @@ package com.sxc.home.yamato;
 
 //import com.sxc.home.yamato.service.mybatis.OrderMapper;
 import com.sxc.home.yamato.mq.Receiver;
+import com.sxc.home.yamato.service.mybatis.OrderMapper;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -25,11 +26,10 @@ public class OrderApplication {
 
 //	@Autowired
 //	private OrderMapper orderMapper;
-
+//
 //	OrderApplication(OrderMapper orderMapper) {
 //		this.orderMapper = orderMapper;
 //	}
-/*
 	static final String topicExchangeName = "spring-boot-exchange";
 
 	static final String queueName = "spring-boot";
@@ -62,12 +62,10 @@ public class OrderApplication {
 	@Bean
 	MessageListenerAdapter listenerAdapter(Receiver receiver) {
 		return new MessageListenerAdapter(receiver, "receiveMessage");
-	}*/
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(OrderApplication.class, args);
-
-
 	}
 //
 //	@Override
